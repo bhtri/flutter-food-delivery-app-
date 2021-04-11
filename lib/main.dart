@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_app/constants.dart';
+import 'package:flutter_food_delivery_app/custom_pageroute.dart';
 import 'package:flutter_food_delivery_app/details_screen.dart';
 import 'package:flutter_food_delivery_app/widget/category_title.dart';
 import 'package:flutter_food_delivery_app/widget/food_card.dart';
@@ -105,7 +106,7 @@ class HomeScreen extends StatelessWidget {
                   press: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
+                      CustomMaterialPageRoute(
                         builder: (context) => DetailsScreen(),
                       ),
                     );
@@ -121,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                   press: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
+                      CustomMaterialPageRoute(
                         builder: (context) => DetailsScreen(),
                       ),
                     );
@@ -137,7 +138,7 @@ class HomeScreen extends StatelessWidget {
                   press: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
+                      CustomMaterialPageRoute(
                         builder: (context) => DetailsScreen(),
                       ),
                     );
