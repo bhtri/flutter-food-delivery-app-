@@ -13,9 +13,14 @@ class DetailsScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SvgPicture.asset(
-                  'assets/icons/backward.svg',
-                  height: 11,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: SvgPicture.asset(
+                    'assets/icons/backward.svg',
+                    height: 11,
+                  ),
                 ),
                 SvgPicture.asset(
                   'assets/icons/menu.svg',
@@ -118,21 +123,21 @@ class DetailsScreen extends StatelessWidget {
                         ),
                         Positioned(
                           right: 15,
-                          bottom: 5,
+                          bottom: 10,
                           child: Container(
                             alignment: Alignment.center,
                             height: 28,
                             width: 28,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: kWhiteColor,
+                              color: Colors.transparent,
                             ),
                             child: Text(
                               '0',
                               style: Theme.of(context)
                                   .textTheme
                                   .button
-                                  .copyWith(color: kPrimaryColor, fontSize: 16),
+                                  .copyWith(color: Colors.white, fontSize: 20),
                             ),
                           ),
                         ),
