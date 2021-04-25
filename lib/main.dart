@@ -5,6 +5,7 @@ import 'package:flutter_food_delivery_app/details_screen.dart';
 import 'package:flutter_food_delivery_app/widget/category_title.dart';
 import 'package:flutter_food_delivery_app/widget/food_card.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,18 +15,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Food App',
       theme: ThemeData(
-        fontFamily: "Poppins",
         scaffoldBackgroundColor: kWhiteColor,
         primaryColor: kPrimaryColor,
-        textTheme: TextTheme(
-          headline5: TextStyle(fontWeight: FontWeight.bold),
-          headline6: TextStyle(fontWeight: FontWeight.bold),
-          button: TextStyle(fontWeight: FontWeight.bold),
-          bodyText1: TextStyle(fontWeight: FontWeight.bold),
+        textTheme: GoogleFonts.poppinsTextTheme(textTheme).copyWith(
+          headline5: GoogleFonts.poppins(
+              textStyle: TextStyle(fontWeight: FontWeight.bold)),
+          headline6: GoogleFonts.poppins(
+              textStyle: TextStyle(fontWeight: FontWeight.bold)),
+          button: GoogleFonts.poppins(
+              textStyle: TextStyle(fontWeight: FontWeight.bold)),
+          bodyText1: GoogleFonts.poppins(
+              textStyle: TextStyle(fontWeight: FontWeight.bold)),
         ),
       ),
       home: HomeScreen(),
